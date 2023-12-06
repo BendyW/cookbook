@@ -25,3 +25,48 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+main {
+  display: grid;
+  height: 100%;
+  grid-template-rows: 100px 900px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+        "nav nav"
+        "list-nav recipe-info";
+
+  .navigator {
+    grid-area: nav;
+    border-bottom: solid white 1px;
+    .settings-nav {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      .settings-nav-item {
+        display: flex;
+      }
+    }
+  }
+  .recipe-list-nav {
+    grid-area: list-nav;
+  }
+  .recipe-info {
+    grid-area: recipe-info;
+  }
+}
+
+
+
+/* .settings-nav {
+  display: inline-flex;
+}
+.settings-nav-item {
+  padding: 0 10px;
+}
+
+.recipe-list-nav {
+  width: 500px;
+  height: 100%;
+  border-right: 1px solid white
+} */
